@@ -1,0 +1,132 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.slideshow__title{
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+  
+.slideshow__subtitle{
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* General */
+
+.splide__slide{
+  cursor: grab; 
+}
+  
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+  
+.slideshow .splide__pagination{
+  justify-content: start; 
+}
+  
+.slideshow .splide__pagination__page {
+  background: #0000;
+  border: 2px solid #fff;
+  height: 10px;
+  transform: none;
+  width: 10px;
+  opacity: 1;
+  margin: 6px;
+}
+
+.slideshow .splide__pagination__page.is-active {
+  background: #fff;
+  transform: scale(1.1);
+}
+  
+.slideshow_sec {
+  height: 92vh;
+}
+  
+.slideshow__image {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+  
+.slideshow__slide img {
+  transform: scale(1.1);
+  opacity: 0;
+  transition: 1s ease;
+}
+  
+.slideshow__slide.is-active img{
+  opacity: 1;
+  transform: scale(1);
+}
+  
+.slideshow__image::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to top,rgba(4,4,4,.65),rgba(54,54,54,.2));
+}
+  
+/* Slideshow */
+  
+.slideshow__content {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  bottom: 8%;
+  width: 100%;
+}
+  
+.slideshow__content .textbox{
+  padding: 10px 20px;
+  transform: translateY(110px);
+  opacity: 0;
+  transition: .7s ease .25s;
+  color: #fff;
+}
+  
+.slideshow__slide.is-active .textbox{
+  transform: translateY(0); 
+  opacity: 1;
+}
+
+
+.thumbnail_slider_sec, 
+.infinite_slider_sec{
+  padding: 100px;
+}
+
+.thumbnails{
+  margin: 0 auto;
+  height: 100px;
+  width: 90%;
+}
+
+.thumbnails .splide__slide{
+  background-color: lightsalmon;
+}
+
+.thumbnails .splide__slide.is-active{
+  background-color: salmon;
+}
+
+.thumbnails .splide__slide{
+  display: grid;
+  place-items: center;
+}
