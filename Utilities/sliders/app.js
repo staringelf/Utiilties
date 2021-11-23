@@ -52,8 +52,37 @@ const infiniteSlider  = new Splide ('#infinite-slider', {
   lazyLoad: 'nearby',
   focus  : 'center',
   gap: 20,
-  flickPower: 200,
-  flickMaxPages: 1
+  flickPower: 100,
+  flickMaxPages: 1,
 })
 
 infiniteSlider.mount();
+
+const testimonialQuotesSlider = new Splide ('#testimonial-quotes-slider', {
+  type: 'fade',
+  rewind: true,
+  drag: true,
+  arrows: false,
+  pagination: false,
+  speed: 800,
+  autoplay: true,
+  interval: 1500,
+  fixedHeight: '200px'
+});
+
+const testimonialLogosSlider = new Splide ('#testimonial-logos-slider', {
+  perPage : 4,
+  perMove: 1,
+  cover   : true,
+  height  : '5rem',
+  gap: 10,
+  fixedWidth: '5rem',
+  arrows: false,
+  pagination: false,
+  isNavigation: true,
+} );
+
+testimonialQuotesSlider.sync( testimonialLogosSlider );
+testimonialQuotesSlider.mount();
+
+testimonialLogosSlider.mount();

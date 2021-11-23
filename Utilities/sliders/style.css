@@ -107,8 +107,7 @@ body{
 }
 
 
-.thumbnail_slider_sec, 
-.infinite_slider_sec{
+.padding-100{
   padding: 100px;
 }
 
@@ -129,4 +128,30 @@ body{
 .thumbnails .splide__slide{
   display: grid;
   place-items: center;
+}
+
+.testimonial__quote{
+   width: 600px;
+   height: 100%;
+   text-align: center;
+   margin: auto;
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+}
+
+
+#testimonial-quotes-slider{
+  background-color: mistyrose;
+}
+
+.testimonial_slider_one_sec{
+  padding: 5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+#testimonial-logos-slider .splide__list{
+  justify-content: center;
 }
