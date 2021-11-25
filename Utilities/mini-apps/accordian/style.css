@@ -1,0 +1,72 @@
+*, *::after,
+*::before{
+  box-sizing: border-box;
+}
+
+.product__accordian_sec{
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+.accordian__item{
+  border-radius: 5px;
+}
+  
+.accordian__item + .accordian__item{
+  margin-top: .5rem;
+}
+
+.accordian__header{
+  padding: .5em 0;
+  transition: all .5s ;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  gap: .5rem;
+  padding-right: 2.4rem;
+}
+  
+.accordian__icon {
+  width: 24px;
+  height: 24px;
+}
+  
+.accordian__header::after{
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 10px;
+  width: 10px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 0px 1.5px 1.5px 0px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 1rem;
+  transition: .3s ease;
+}
+  
+.accordian__item--active .accordian__header::after{
+  transform: rotate(225deg);
+}
+
+.accordian__panel{
+  padding: 2rem 1rem; 
+  width: 100%;
+  transition: all .3s ease-in-out;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-y: hidden;
+  padding: 0 10px 0 25px;
+}
+
+.accordian__item--active .accordian__panel{
+  padding: 10px;
+}
+  
